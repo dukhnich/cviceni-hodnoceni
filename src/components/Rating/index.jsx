@@ -9,11 +9,7 @@ export const Rating = () => {
     <div className="rating">
       <div className="rating__value">{value}</div>
       <div className="rating__stars">
-        <Star />
-        <Star />
-        <Star />
-        <Star />
-        <Star />
+        {[...Array(5).keys()].map(i => <Star key={i} value={i + 1} onVote={setValue} />)}
       </div>
     </div>
   );
