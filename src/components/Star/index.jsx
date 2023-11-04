@@ -1,11 +1,8 @@
 import { useState } from 'react';
 import './style.css';
 
-export const Star = ({value, onVote}) => {
-  const [glowing, setGlowing] = useState(false);
-  const toggleGlowing = () => setGlowing(!glowing);
+export const Star = ({value, onVote, glowing}) => {
   const onClick = () => {
-      toggleGlowing();
       onVote(value);
   }
   
